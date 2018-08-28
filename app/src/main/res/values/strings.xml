@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Weather App</string>
+    <string name="ChangeCountry">Change Country</string>
+    <string name="ChangeCity">Change City</string>
+    <string name="degreeCel">°C</string>
+    <string name="search_hint">Vancouver, CA</string>
+
+</resources>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <color name="generalBackground">#106cc8</color>
+
+    <color name="sunnyDay">#106cc8</color>
+    <color name="slightCloud">#2d5699</color>
+    <color name="cloud">#5e6c84</color>
+    <color name="veryCloud">#505968</color>
+    <color name="showerRain">#464e5b</color>
+    <color name="rain">#464e5b</color>
+    <color name="thunderstorm">#464e5b</color>
+    <color name="snow">#91afe0</color>
+    <color name="fog">#8294b2</color>
+    <color name="night">#3f10b7</color>
+    <color name="slightCloudNight">#2d5699</color>
+
+
+
+</resources>

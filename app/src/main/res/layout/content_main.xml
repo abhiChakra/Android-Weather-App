@@ -1,0 +1,430 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+
+    tools:context=".MainActivity"
+    tools:showIn="@layout/activity_main"
+    android:background="@color/generalBackground"
+    >
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:fadeScrollbars="true"
+        android:scrollbarAlwaysDrawVerticalTrack="true"
+        >
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/total_wrap"
+                >
+
+
+                <TextView
+                    android:id="@+id/cityName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="60dp"
+                    android:text="City Name"
+                    android:textAlignment="center"
+                    android:textColor="#fff"
+                    android:textSize="50sp"
+                    app:layout_goneMarginTop="50dp" />
+
+
+                <ImageView
+                    android:id="@+id/weatherIcon"
+                    android:layout_width="98dp"
+                    android:layout_height="98dp"
+                    android:layout_below="@id/cityName"
+                    android:layout_centerInParent="true"
+                    android:layout_marginTop="20dp"
+                    android:background="#fff" />
+
+                <TextView
+                android:id="@+id/description"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/weatherIcon"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="7dp"
+                android:textColor="#fff"
+                android:text="Sunny"
+                android:textSize="30sp"
+                app:layout_constraintTop_toBottomOf="@id/weatherIcon" />
+
+
+                <TextView
+                    android:id="@+id/temperature"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/weatherIcon"
+                    android:layout_centerInParent="true"
+                    android:layout_marginTop="38dp"
+                    android:textColor="#fff"
+                    android:text="18°C"
+                    android:textSize="80sp"
+                    app:layout_constraintTop_toBottomOf="@id/weatherIcon" />
+
+
+
+
+
+                <ImageView
+                    android:id="@+id/sunriseIcon"
+                    android:layout_width="58dp"
+                    android:layout_height="58dp"
+                    android:layout_below="@id/temperature"
+                    android:layout_toLeftOf="@id/weatherIcon"
+                    android:layout_toStartOf="@id/weatherIcon"
+                    android:src="@drawable/sunrise"
+                    android:layout_marginTop="36dp"
+                    android:background="#fff"
+
+                    />
+
+                <TextView
+
+                    android:id="@+id/sunrise"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignStart="@+id/sunriseIcon"
+                    android:layout_alignLeft="@id/sunriseIcon"
+                    android:textColor="#fff"
+                    android:layout_below="@+id/temperature"
+                    android:text="SUNRISE"
+                    android:textStyle="bold" />
+
+
+                <TextView
+
+                    android:id="@+id/sunriseTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="93dp"
+                    android:textColor="#fff"
+                    android:layout_marginTop="10dp"
+                    android:layout_below="@+id/sunriseIcon"
+                    android:text="SUNRISE TIME"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/sunsetIcon"
+                    android:layout_width="58dp"
+                    android:layout_height="58dp"
+                    android:layout_below="@id/temperature"
+                    android:layout_toEndOf="@id/weatherIcon"
+                    android:layout_toRightOf="@id/weatherIcon"
+                    android:layout_marginTop="36dp"
+                    android:src="@drawable/sunset"
+                    android:background="#fff" />
+
+                <TextView
+
+                    android:id="@+id/sunset"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#fff"
+                    android:layout_alignStart="@+id/sunsetIcon"
+                    android:layout_alignLeft="@id/sunsetIcon"
+                    android:layout_below="@+id/temperature"
+                    android:text="SUNRISE"
+                    android:textStyle="bold" />
+
+
+                <TextView
+
+                    android:id="@+id/sunsetTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="247dp"
+                    android:textColor="#fff"
+                    android:layout_marginTop="10dp"
+                    android:layout_below="@+id/sunsetIcon"
+                    android:text="SUNSET TIME"
+                    android:textStyle="bold" />
+
+                <!--<TextView-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:id="@+id/hourlyTitle"-->
+                    <!--android:textColor="#fff"-->
+                    <!--android:layout_below="@+id/sunsetIcon"-->
+                    <!--android:textSize="25sp"-->
+                    <!--android:layout_marginTop="70dp"-->
+                    <!--android:text="Hourly Forecast"-->
+                    <!--/>-->
+
+
+                <!--<HorizontalScrollView-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_below="@+id/hourlyTitle"-->
+                    <!--android:fillViewport="true"-->
+                    <!--android:measureAllChildren="false"-->
+                    <!--&gt;-->
+
+                    <!--<LinearLayout-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:orientation="horizontal"-->
+                        <!--&gt;-->
+
+                        <!--<RelativeLayout-->
+                            <!--android:layout_width="wrap_content"-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:id="@+id/sub_wrap1"-->
+                            <!--android:paddingStart="50dp"-->
+                            <!--android:paddingLeft="50dp"-->
+                            <!--&gt;-->
+
+                            <!--<TextView-->
+                                <!--android:id="@+id/time1"-->
+                                <!--android:layout_width="wrap_content"-->
+                                <!--android:layout_height="wrap_content"-->
+                                <!--android:textColor="#fff"-->
+                                <!--android:layout_marginTop="10dp"-->
+                                <!--android:text="TIME1"-->
+                                <!--android:textStyle="bold" />-->
+
+
+                            <!--<ImageView-->
+                                <!--android:id="@+id/weatherIcon2"-->
+                                <!--android:layout_width="48dp"-->
+                                <!--android:layout_height="48dp"-->
+                                <!--android:layout_centerInParent="true"-->
+                                <!--android:layout_below="@id/time1"-->
+                                <!--android:layout_marginTop="20dp"-->
+                                <!--android:background="#fff" />-->
+
+                            <!--<TextView-->
+                                <!--android:id="@+id/description2"-->
+                                <!--android:layout_width="wrap_content"-->
+                                <!--android:layout_height="wrap_content"-->
+                                <!--android:layout_below="@id/weatherIcon2"-->
+                                <!--android:layout_centerInParent="true"-->
+                                <!--android:layout_marginTop="5dp"-->
+                                <!--android:textColor="#fff"-->
+                                <!--android:text="Sunny"-->
+                                <!--android:textSize="25sp"-->
+                                <!--app:layout_constraintTop_toBottomOf="@id/weatherIcon2" />-->
+
+                            <!--<TextView-->
+                                <!--android:id="@+id/temperature2"-->
+                                <!--android:layout_width="wrap_content"-->
+                                <!--android:layout_height="wrap_content"-->
+                                <!--android:layout_below="@id/weatherIcon2"-->
+                                <!--android:layout_centerInParent="true"-->
+                                <!--android:layout_marginTop="38dp"-->
+                                <!--android:textColor="#fff"-->
+                                <!--android:text="18°C"-->
+                                <!--android:textSize="40sp"-->
+                                <!--app:layout_constraintTop_toBottomOf="@id/weatherIcon2" />-->
+
+                        <!--</RelativeLayout>-->
+
+                        <!--<RelativeLayout-->
+                            <!--android:layout_width="wrap_content"-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:id="@+id/sub_wrap2"-->
+                            <!--android:paddingStart="50dp"-->
+                            <!--android:paddingLeft="50dp"-->
+                            <!--&gt;-->
+
+                            <!--<TextView-->
+
+                                <!--android:id="@+id/time2"-->
+                                <!--android:layout_width="wrap_content"-->
+                                <!--android:layout_height="wrap_content"-->
+                                <!--android:textColor="#fff"-->
+                                <!--android:layout_marginTop="10dp"-->
+                                <!--android:text="TIME1"-->
+                                <!--android:textStyle="bold" />-->
+
+
+                            <!--<ImageView-->
+                                <!--android:id="@+id/weatherIcon3"-->
+                                <!--android:layout_width="48dp"-->
+                                <!--android:layout_height="48dp"-->
+                                <!--android:layout_centerInParent="true"-->
+                                <!--android:layout_below="@id/time2"-->
+                                <!--android:layout_marginTop="20dp"-->
+                                <!--android:background="#fff" />-->
+
+                            <!--<TextView-->
+                                <!--android:id="@+id/description3"-->
+                                <!--android:layout_width="wrap_content"-->
+                                <!--android:layout_height="wrap_content"-->
+                                <!--android:layout_below="@id/weatherIcon3"-->
+                                <!--android:layout_centerInParent="true"-->
+                                <!--android:layout_marginTop="5dp"-->
+                                <!--android:textColor="#fff"-->
+                                <!--android:text="Sunny"-->
+                                <!--android:textSize="25sp"-->
+                                <!--app:layout_constraintTop_toBottomOf="@id/weatherIcon3" />-->
+
+                            <!--<TextView-->
+                                <!--android:id="@+id/temperature3"-->
+                                <!--android:layout_width="wrap_content"-->
+                                <!--android:layout_height="wrap_content"-->
+                                <!--android:layout_below="@id/weatherIcon3"-->
+                                <!--android:layout_centerInParent="true"-->
+                                <!--android:layout_marginTop="38dp"-->
+                                <!--android:textColor="#fff"-->
+                                <!--android:text="18°C"-->
+                                <!--android:textSize="40sp"-->
+                                <!--app:layout_constraintTop_toBottomOf="@id/weatherIcon3" />-->
+
+                        <!--</RelativeLayout>-->
+
+
+                        <!--<RelativeLayout-->
+                            <!--android:layout_width="wrap_content"-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:id="@+id/sub_wrap3"-->
+                            <!--android:paddingStart="50dp"-->
+                            <!--android:paddingLeft="50dp">-->
+
+                            <!--<TextView-->
+
+                                <!--android:id="@+id/time3"-->
+                                <!--android:layout_width="wrap_content"-->
+                                <!--android:layout_height="wrap_content"-->
+                                <!--android:textColor="#fff"-->
+                                <!--android:layout_marginTop="10dp"-->
+                                <!--android:text="TIME1"-->
+                                <!--android:textStyle="bold" />-->
+
+
+                            <!--<ImageView-->
+                                <!--android:id="@+id/weatherIcon4"-->
+                                <!--android:layout_width="48dp"-->
+                                <!--android:layout_height="48dp"-->
+                                <!--android:layout_centerInParent="true"-->
+                                <!--android:layout_below="@id/time3"-->
+                                <!--android:layout_marginTop="20dp"-->
+                                <!--android:background="#fff" />-->
+
+                            <!--<TextView-->
+                                <!--android:id="@+id/description4"-->
+                                <!--android:layout_width="wrap_content"-->
+                                <!--android:layout_height="wrap_content"-->
+                                <!--android:layout_below="@id/weatherIcon4"-->
+                                <!--android:layout_centerInParent="true"-->
+                                <!--android:layout_marginTop="5dp"-->
+                                <!--android:textColor="#fff"-->
+                                <!--android:text="Sunny"-->
+                                <!--android:textSize="25sp"-->
+                                <!--app:layout_constraintTop_toBottomOf="@id/weatherIcon4" />-->
+
+                            <!--<TextView-->
+                                <!--android:id="@+id/temperature4"-->
+                                <!--android:layout_width="wrap_content"-->
+                                <!--android:layout_height="wrap_content"-->
+                                <!--android:layout_below="@id/weatherIcon4"-->
+                                <!--android:layout_centerInParent="true"-->
+                                <!--android:layout_marginTop="38dp"-->
+                                <!--android:textColor="#fff"-->
+                                <!--android:text="18°C"-->
+                                <!--android:textSize="40sp"-->
+                                <!--app:layout_constraintTop_toBottomOf="@id/weatherIcon4" />-->
+
+                        <!--</RelativeLayout>-->
+
+
+                        <!--<RelativeLayout-->
+                            <!--android:layout_width="wrap_content"-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:id="@+id/sub_wrap4"-->
+                            <!--android:paddingStart="50dp"-->
+                            <!--android:paddingLeft="50dp"-->
+                            <!--&gt;-->
+
+                            <!--<TextView-->
+
+                                <!--android:id="@+id/time4"-->
+                                <!--android:layout_width="wrap_content"-->
+                                <!--android:layout_height="wrap_content"-->
+                                <!--android:textColor="#fff"-->
+                                <!--android:layout_marginTop="10dp"-->
+                                <!--android:text="TIME1"-->
+                                <!--android:textStyle="bold" />-->
+
+
+                            <!--<ImageView-->
+                                <!--android:id="@+id/weatherIcon5"-->
+                                <!--android:layout_width="48dp"-->
+                                <!--android:layout_height="48dp"-->
+                                <!--android:layout_centerInParent="true"-->
+                                <!--android:layout_below="@id/time4"-->
+                                <!--android:layout_marginTop="20dp"-->
+                                <!--android:background="#fff" />-->
+
+                            <!--<TextView-->
+                                <!--android:id="@+id/description5"-->
+                                <!--android:layout_width="wrap_content"-->
+                                <!--android:layout_height="wrap_content"-->
+                                <!--android:layout_below="@id/weatherIcon5"-->
+                                <!--android:layout_centerInParent="true"-->
+                                <!--android:layout_marginTop="5dp"-->
+                                <!--android:textColor="#fff"-->
+                                <!--android:text="Sunny"-->
+                                <!--android:textSize="25sp"-->
+                                <!--app:layout_constraintTop_toBottomOf="@id/weatherIcon5" />-->
+
+                            <!--<TextView-->
+                                <!--android:id="@+id/temperature5"-->
+                                <!--android:layout_width="wrap_content"-->
+                                <!--android:layout_height="wrap_content"-->
+                                <!--android:layout_below="@id/weatherIcon5"-->
+                                <!--android:layout_centerInParent="true"-->
+                                <!--android:layout_marginTop="38dp"-->
+                                <!--android:textColor="#fff"-->
+                                <!--android:text="18°C"-->
+                                <!--android:textSize="40sp"-->
+                                <!--app:layout_constraintTop_toBottomOf="@id/weatherIcon5" />-->
+
+                        <!--</RelativeLayout>-->
+
+
+                    <!--</LinearLayout>-->
+
+
+
+
+                <!--</HorizontalScrollView>-->
+
+
+
+
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+
+
+
+
+
+
+
+
+</android.support.constraint.ConstraintLayout>
